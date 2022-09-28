@@ -4,12 +4,21 @@ import './Shop.css'
 const Shop = () => {
     const [carts, setCarts] = useState([]);
     useEffect(() => {
-        console.log('shop')
-    }, [])
+        fetch('carts.json')
+        .then(res => res())
+        .then(data => console.log(data))
+    }, [carts])
     return (
-        <div>
-            
+       <div className='shop-conatiner'>
+
+         <div className='gym-container'>
+           <h1>shop</h1> 
         </div>
+
+        <div className='time-container'>
+            <h1>Sabikonnahar</h1>
+        </div>
+       </div>   
     );
 };
 
