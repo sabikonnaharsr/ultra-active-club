@@ -17,10 +17,6 @@ const Header = () => {
                     <a href="/login">Login</a>
                 </div>
             </nav>
-           <div className='selected-excercise'>
-              <h2>Select today’s exercise</h2> 
-           </div>
-
         </div>
     );
 };

@@ -10,14 +10,13 @@ const Shop = () => {
     }, [carts])
     return (
        <div className='shop-conatiner'>
+           <div className='gym-container'>
+              <h2>Select today’s exercise</h2> 
+           </div>
 
-         <div className='gym-container'>
-           <h1>shop</h1> 
-        </div>
-
-        <div className='time-container'>
+           <div className='time-container'>
             <h1>Sabikonnahar</h1>
-        </div>
+           </div>
        </div>   
     );
 };
