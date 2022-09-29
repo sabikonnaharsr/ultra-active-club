@@ -2,6 +2,7 @@ import React from 'react';
 import './Carts.css'
 
 const Cart = ({handleAddToCart,cart}) => {
+   
     const {img, name, discription, age, time} = cart;
     return (
         <div className='cart'>
@@ -14,7 +15,7 @@ const Cart = ({handleAddToCart,cart}) => {
                     <p>age: {age} </p>
                 </div>
            </div>
-           <button onClick={()=>  handleAddToCart()} className='btn-cart'>
+           <button onClick={()=>  handleAddToCart(cart)} className='btn-cart'>
                 <p className='btn-text'>Add To Cart</p> 
             </button>
         </div>

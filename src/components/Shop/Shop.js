@@ -8,7 +8,10 @@ const Shop = () => {
         fetch('carts.json')
         .then(res => res.json())
         .then(data => setCarts(data))
-    }, [])
+    }, []);
+    const handleAddToCart = (carts) => {
+        console.log(carts)
+    }
     return (
        <div className='shop-container'>
            <div className='carts-container'>
@@ -23,6 +26,7 @@ const Shop = () => {
            {
               carts.map(cart=> <Cart key={cart.id}
                 cart= {cart}
+                handleAddToCart = {handleAddToCart}
                 ></Cart>)
               }
            </div>
