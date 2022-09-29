@@ -6,10 +6,11 @@
 }
 .cart img{
     width: 286px;
-    height: 286px;
+    height: 250px;
+    border-radius: 5px;
 }
 .cart-info{
-    
+  
 }
 .cart-name{
     font-family: 'Lato';

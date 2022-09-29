@@ -1,6 +1,7 @@
 
 .shop-container{
-    color: cadetblue;
+    background-color: slategrey;
+    color: aqua;
     display: grid;
     grid-template-columns: 4fr 1fr;
 

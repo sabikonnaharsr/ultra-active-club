@@ -7,8 +7,8 @@ const Cart = ({handleAddToCart,cart}) => {
         <div className='cart'>
            <img src={img} alt="" />
            <div className='cart-info'>
-                <h2 className='cart-name'>Damble{name}</h2>
-                <h4>time: {time}</h4>
+                <h2 className='cart-name'>{name}</h2>
+                <h4>time required: {time}</h4>
                 <p>age: {age} </p>
                 <button onClick={()=>  handleAddToCart()} className='btn-cart'>
                 <p className='btn-text'>Add To Cart</p> 
