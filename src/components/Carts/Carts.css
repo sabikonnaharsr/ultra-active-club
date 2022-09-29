@@ -5,7 +5,11 @@
     border-radius: 5px;
 }
 .cart img{
-
+    width: 286px;
+    height: 286px;
+}
+.cart-info{
+    
 }
 .cart-name{
     font-family: 'Lato';
