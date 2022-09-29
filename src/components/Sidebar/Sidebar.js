@@ -1,7 +1,7 @@
-import React from 'react';
-import './Sidebar.css'
+import React, { useState } from 'react';
+import './Sidebar.css';
 
-const Sidebar = ({carts}) => {
+const Sidebar = ({totalTimes, handleTimeAdd, timeBreak}) => {
     return (
         <div>
             <h1>Sabikonnahar</h1>
@@ -32,11 +32,11 @@ const Sidebar = ({carts}) => {
                <div>
                   <h3> Break Time</h3>
                   <div className='break-seconds'>
-                        <p style={{}}>10s</p>
-                        <p>20s</p>
-                        <p>30s</p>
-                        <p>40s</p>
-                        <p>50s</p>
+                        <p><span onClick={(e) => handleTimeAdd(e.target.innerText)}>10</span>s</p>
+                        <p><span onClick={(e) => handleTimeAdd(e.target.innerText)}>40</span>s</p>
+                        <p><span onClick={(e) => handleTimeAdd(e.target.innerText)}>20</span>s</p>
+                        <p><span onClick={(e) => handleTimeAdd(e.target.innerText)}>56</span>s</p>
+                        <p><span onClick={(e) => handleTimeAdd(e.target.innerText)}>32</span>s</p>
                   </div>
                </div>
 
@@ -45,14 +45,14 @@ const Sidebar = ({carts}) => {
                </div>
                <div className='all-time'>
                <div className='excercise-time'>
-                   <h4>Excercise  Time {carts}</h4>
-                   <h4>0 seconds</h4>
+                   <h4>Excercise  Time </h4>
+                   <h4>{totalTimes} <span>seconds</span> </h4>
                </div>
                <br />
 
                 <div className='break-time'>
                      <h4>Break Time</h4>
-                     <h4>0 seconds</h4>
+                     <h4>{timeBreak} seconds</h4>
                 </div>
                </div>
                <div >

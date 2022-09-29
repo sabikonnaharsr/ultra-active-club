@@ -5,7 +5,8 @@ import './Shop.css'
 
 const Shop = () => {
     const [carts, setCarts] = useState([]);
-    const [sidebar, setSidebar] = useState([]);
+    const [times, setTimes] = useState([]);
+    const [timeBreak, setTimeBreak] = useState()
 
 
     useEffect(() => {
@@ -13,12 +14,37 @@ const Shop = () => {
         .then(res => res.json())
         .then(data => setCarts(data))
     }, []);
+
     const handleAddToCart = (carts) => {
-        const newCart = [...carts, carts]
-        setCarts(newCart);
+        const newCart = [...times, carts]
+        setTimes(newCart);
     }
+
+    const totalSum = times.reduce(function(a, b) {
+        return parseFloat(a) + parseFloat(b)
+    }, 0)
+
+    const handleTimeAdd = (second) => {
+        localStorage.setItem('seconds',second)
+        setTimeBreak(second)
+    }
+
+    const dataLoadLS = () => {
+        let secondAdd = {};
+        const getLSValue = localStorage.getItem('seconds')
+        if(getLSValue){
+            secondAdd = JSON.parse(getLSValue)
+        }
+        else{
+            const setLSValue = localStorage.setItem('seconds', 0)
+            secondAdd = JSON.stringify(setLSValue)
+        }
+        handleTimeAdd(secondAdd)
+    }
+
+
     return (
-       <div className='shop-container'>
+       <div onLoad={dataLoadLS} className='shop-container'>
               <h2 className='select-title'>Select today’s exercise</h2>    
 
            <div className='mainTwoContainer'>
@@ -34,7 +60,11 @@ const Shop = () => {
            </div>
 
            <div className='sidebar-container'>         
-            <Sidebar sidebar={sidebar}></Sidebar>
+            <Sidebar 
+            handleTimeAdd={handleTimeAdd}
+            timeBreak={timeBreak}
+            totalTimes={totalSum}
+            ></Sidebar>
             </div>
             
            </div>

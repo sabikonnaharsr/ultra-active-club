@@ -32,3 +32,16 @@ body{
     color: slategray;
     
 }
+
+@media screen and (max-width: 640px){
+    .title{
+        width: 600px;
+    text-align: center;
+    margin-left: -225px;
+    margin-top: 65px;
+    margin-right: -208px;
+    }
+    .navItems{
+        display: none;
+    }
+}

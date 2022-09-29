@@ -15,7 +15,7 @@ const Cart = ({cart, handleAddToCart}) => {
                     <p>age: {age} </p>
                 </div>
            </div>
-           <button onClick={()=> handleAddToCart(cart)} className='btn-cart'>
+           <button onClick={()=> handleAddToCart(time)} className='btn-cart'>
                 <p className='btn-text'>Add To Cart</p> 
             </button>
         </div>
