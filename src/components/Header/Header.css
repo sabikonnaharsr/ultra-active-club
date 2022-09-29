@@ -9,6 +9,9 @@
     padding-right: 140px;
 
 }
+.header .title{
+    font-size: 30px;
+}
 .header a{
     color: #FFFFFF;
     font-size: 17px;
