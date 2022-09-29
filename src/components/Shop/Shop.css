@@ -1,7 +1,15 @@
+
 .shop-container{
     color: cadetblue;
     display: grid;
     grid-template-columns: 4fr 1fr;
-    
+
+}
+.carts-container{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 20px;
+
+
 
 }

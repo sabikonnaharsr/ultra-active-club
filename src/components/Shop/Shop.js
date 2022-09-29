@@ -11,10 +11,12 @@ const Shop = () => {
     }, [])
     return (
        <div className='shop-container'>
-           <div className='cart-container'>
+           <div className='carts-container'>
               <h2>Select today’s exercise</h2> 
               {
-                carts.map(cart=> <Cart key={cart.id}></Cart>)
+                carts.map(cart=> <Cart key={cart.id}
+                cart= {cart}
+                ></Cart>)
               }
            </div>
 
