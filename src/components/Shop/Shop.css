@@ -1,7 +1,8 @@
 
 .shop-container{
     background-color: slategrey;
-    color: aqua;
+    /* color: aqua; */
+    color: white;
     display: grid;
     grid-template-columns: 4fr 1fr;
 

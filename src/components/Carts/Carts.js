@@ -9,8 +9,10 @@ const Cart = ({handleAddToCart,cart}) => {
            <div className='cart-info'>
                 <h2 className='cart-name'>{name}</h2>
                 <p> About : {discription}</p>
-                <h4>time required: {time}</h4>
-                <p>age: {age} </p>
+                <div className='p-text'>
+                    <p>time required: {time}</p>
+                    <p>age: {age} </p>
+                </div>
            </div>
            <button onClick={()=>  handleAddToCart()} className='btn-cart'>
                 <p className='btn-text'>Add To Cart</p> 

@@ -4,13 +4,14 @@
     height: 410px;
     border: 1px solid royalblue;
     border-radius: 5px;
+    position: relative;
 }
 .cart img{
     object-fit: cover;
     width: 100%;
     /* width: 286px; */
     height: 170px;
-    border-radius: 5px;
+    border-radius: 5px 0px 0px ;
 }
 .cart-info{
    margin: 0px 12px ;
@@ -20,10 +21,17 @@
    /* margin-top: 7px; */
 
 }
+.p-text{
+    font-size: 18PX;
+    
+}
+  
 .cart-info P{
+    font-weight: 500;
     margin-bottom: 0px;
     margin-top: 5px;
 }
+
 .cart-name{
     margin-top: 7px;
     font-family: 'Lato';
@@ -39,6 +47,8 @@
     border: none;
     color: white;
     width: 100%;
+    bottom: 0;
+    position: absolute;
 }
 .btn-cart:hover{
     background-color:  darkslateblue;
