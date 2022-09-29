@@ -9,8 +9,8 @@ const Cart = ({handleAddToCart,cart}) => {
            <div className='cart-info'>
               <h2 className='cart-name'>Ultraboost 22 Shoes{name}</h2>
               <h3>Price ${} </h3>
-              <h4>Manufacturer : Addidas{}</h4>
-              <p>Rating : 3 start {} </p>
+              <h4>time{time}</h4>
+              <p>age: {age} </p>
               <button onClick={()=>  handleAddToCart()} className='btn-cart'>
              <p className='btn-text'>Add To Cart</p> 
              </button>
