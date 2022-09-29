@@ -1,8 +1,12 @@
+body{
+    background-color: slategray;
+}
+
 .header{
     height: 80px;
     color: aqua;
     background-color: slategrey;
-     display: flex; 
+    display: flex; 
     align-items: center;
      justify-content: space-between;
     padding-left: 140px;

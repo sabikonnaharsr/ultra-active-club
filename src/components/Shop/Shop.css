@@ -1,23 +1,47 @@
-
 .shop-container{
-    background-color: slategrey;
+    /* background-color: slategrey; */
     /* color: aqua; */
-    color: white;
+    /* color: white;
     display: grid;
-    grid-template-columns: 4fr 1fr;
+    grid-template-columns: 4fr 1fr; */
 
 }
+
+.mainTwoContainer{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas: 
+    "leftSiDe leftSiDe leftSiDe rightSide"
+    "leftSiDe leftSiDe leftSiDe rightSide"
+    "leftSiDe leftSiDe leftSiDe rightSide"
+    ;
+}
+
+.select-title{
+    margin-top: 45px;
+    margin-bottom: 50px;
+    margin-left: 90px;
+}
+
 .carts-container{
+    width: 70%;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-gap: 20px;
-    margin: 20px 30px;
+    grid-gap: 50px;
+    margin: 4px 90px;
+    grid-area: leftSiDe;
 }
 .sidebar-container{
+    position: absolute;
+    right: 0;
+    width: 260px;
     background-color: darkslateblue;
     border-radius: 5px;
     padding: 20px;
+    grid-area: rightSide;
 }
+
+
 .person-detalis{
     display: flex;
     align-items: center;
@@ -77,6 +101,6 @@
 
 @media screen and (max-width: 1100px){
     .carts-conatiner{
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(2, 1fr);
     }
 }
